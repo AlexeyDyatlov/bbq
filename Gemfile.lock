@@ -138,6 +138,8 @@ GEM
     validate_url (1.0.2)
       activemodel (>= 3.0.0)
       addressable
+    validates_email_format_of (1.6.3)
+      i18n
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -161,6 +163,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier
   validate_url
+  validates_email_format_of
   web-console (>= 3.3.0)
 
 RUBY VERSION
