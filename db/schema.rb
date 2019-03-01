@@ -26,17 +26,6 @@ ActiveRecord::Schema.define(version: 2019_02_28_204416) do
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
-  create_table "questions", force: :cascade do |t|
-    t.string "text"
-    t.string "answer"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.integer "author_id"
-    t.index ["author_id"], name: "index_questions_on_author_id"
-    t.index ["user_id"], name: "index_questions_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"

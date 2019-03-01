@@ -13,6 +13,7 @@ gem 'rails_12factor'
 gem 'pg'
 gem 'validate_url'
 gem 'validates_email_format_of'
+gem 'twitter-bootstrap-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

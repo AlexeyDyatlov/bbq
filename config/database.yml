@@ -5,13 +5,13 @@ default: &default
 
 development:
   <<: *default
-  database: askme
+  database: bbq
 
 test:
   <<: *default
-  database: askme_test
+  database: bbq_test
 
 production:
   <<: *default
-  database: askme_prod
+  database: bbq_prod
   
