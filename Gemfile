@@ -14,6 +14,8 @@ gem 'pg'
 gem 'validate_url'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
+gem 'devise-i18n'
+gem 'russian'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
