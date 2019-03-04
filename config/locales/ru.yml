@@ -23,4 +23,5 @@ ru:
       updated: 'Данные успешно обновлены'  
   app:
     name: 'Шашлыки'
-    company: 'A. D.'        
+    company: 'A. D.'     
+    
