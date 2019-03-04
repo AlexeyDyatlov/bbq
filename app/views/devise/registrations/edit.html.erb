@@ -34,7 +34,7 @@
       <div class="form-group">
         <%= f.label :password_confirmation %>
         <div class="input-group">
-          <%= f.password_field :email, autofocus: true, autocomplete: "password", class: 'form-control' %>
+          <%= f.password_field :password_confirmation, autofocus: true, autocomplete: "password", class: 'form-control' %>
           <div class="input-group-addon">
             <span class="glyphicon glyphicon-lock"></span>
           </div>
@@ -62,6 +62,6 @@
         <%= button_to "Удалить аккаунт", registration_path(resource_name), data: { confirm: "Уверены?" }, method: :delete , class: 'btn btn-primary' %>
       </div>
     
-    <%= link_to "Back", :back %>
+    <%= link_to "Назад", :back %>
   </div>
 </div>
