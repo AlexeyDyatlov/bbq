@@ -16,9 +16,9 @@ ru:
         description: 'Описание'
   controllers:
     events:
-      created: 'Событие успешно создано'
-      updated: 'Событие обновлено'
-      destroyed: 'Событие удалено'
+      created: 'Событие успешно создано!'
+      updated: 'Событие обновлено!'
+      destroyed: 'Событие удалено!'
     users:
       updated: 'Данные успешно обновлены'  
   app:
@@ -28,4 +28,5 @@ ru:
     one: '1 ошибка'
     few: '%{count} ошибки'
     many: '%{count} ошибок'
-    
+  notiсe:
+    delete: 'Точно удалить?'
