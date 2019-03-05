@@ -3,6 +3,9 @@
 <% if errors.any? %>
   <div class="alert alert-danger alert-dismissible fadeout">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <div class="lead buffer-bottom">
+      В вашей форме <%= I18n.t :errors, count: errors.count %>:
+    </div>
     <ul>
       <% errors.full_messages.each do |message| %>
         <li><%= message %></li>

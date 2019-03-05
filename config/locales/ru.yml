@@ -23,5 +23,9 @@ ru:
       updated: 'Данные успешно обновлены'  
   app:
     name: 'Шашлыки'
-    company: 'A. D.'     
+    company: 'A. D.'
+  errors:
+    one: '1 ошибка'
+    few: '%{count} ошибки'
+    many: '%{count} ошибок'
     
