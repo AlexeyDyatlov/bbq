@@ -20,7 +20,15 @@ ru:
       updated: 'Событие обновлено!'
       destroyed: 'Событие удалено!'
     users:
-      updated: 'Данные успешно обновлены'  
+      updated: 'Данные успешно обновлены'
+    comments:
+      destroyed: 'Комментарий удален'
+      created: 'Ваш комментарий добавлен'
+      error: 'Ошибка с комментарием'
+    subscriptions:
+      created: 'Вы подписаны на это событие'
+      destroyed: 'Участник отписан'
+      error: 'Подписка/отписка не сработала'
   app:
     name: 'Шашлыки'
     company: 'A. D.'
@@ -30,3 +38,9 @@ ru:
     many: '%{count} ошибок'
   notiсe:
     delete: 'Точно удалить?'
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+  subscriptions:
+    subscription:
+      destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
