@@ -25,6 +25,12 @@ ru:
       subscription:
         user_name: 'Ваше имя'
         user_email: 'Ваш  email'
+    errors:
+      models:
+        subscription:
+          attributes:
+            user_email:
+              already_used: 'уже используется'
   controllers:
     events:
       created: 'Событие успешно создано!'
