@@ -18,8 +18,4 @@ class ApplicationController < ActionController::Base
     model.user == current_user ||
     (model.try(:event).present? && model.event.user == current_user))
   end
-
-  def user_can_subscribe?(event)
-    true unless current_user_can_edit?(event)
-  end
 end
