@@ -26,6 +26,7 @@ class PhotosController < ApplicationController
     redirect_to @event, message
   end
 
+
   private
 
   def set_event
