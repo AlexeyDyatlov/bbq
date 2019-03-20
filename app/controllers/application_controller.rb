@@ -20,6 +20,6 @@ class ApplicationController < ActionController::Base
   end
 
   def user_cant_subscribe?(event)
-    event.user == current_user || Subscription.find_by(user_id: current_user)
+    event.user == current_user || Subscription.where(user: current_user).exists?
   end
 end
