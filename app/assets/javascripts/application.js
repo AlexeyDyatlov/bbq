@@ -15,3 +15,10 @@
 //= require_tree .
 //= require jquery
 //= require map.js
+//= require twitter/bootstrap
+//= require lightbox-bootstrap
+
+$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) { 
+	event.preventDefault();
+	$(this).ekkoLightbox();
+});

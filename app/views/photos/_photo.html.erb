@@ -1,5 +1,15 @@
-<div class="event-photo buffer-both">
-  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
+<% unless photo.user.nil? %>
+  <% image_title = "Добавил #{render partial: 'users/user', object: photo.user}" %>
 
-  Добавил <%= render partial: 'users/user', object: photo.user %>
-</div>
+  <% image_title += " #{link_to fa_icon('trash-o'), event_photo_path(photo.event, photo),
+    method: :delete, data: {confirm: 'Точно удалить фото?'}}" if current_user_can_edit?(photo) %>
+
+  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: {
+    toggle: 'lightbox', title: image_title, gallery: 'event-photos' } %>
+<% else %>
+  <% image_title = " #{link_to(fa_icon('trash'), event_photo_path(photo.event, photo),
+    method: :delete, data: {confirm: 'Точно удалить фото?'}, gallery: 'event-photos' )}" if current_user_can_edit?(photo) %>
+
+  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url, data: {
+    toggle: 'lightbox', title: image_title, gallery: 'event-photos' } %>
+<% end %>

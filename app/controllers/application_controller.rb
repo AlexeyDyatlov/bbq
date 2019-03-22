@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user_can_edit?
   helper_method :user_cant_subscribe?
+  helper_method :user_can_add_photo?
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(
@@ -21,5 +22,9 @@ class ApplicationController < ActionController::Base
 
   def user_cant_subscribe?(event)
     event.user == current_user || Subscription.where(event: event).where(user: current_user).exists?
+  end
+
+  def user_can_add_photo?(event)
+    user_signed_in? && event.visitors.include?(current_user)
   end
 end
