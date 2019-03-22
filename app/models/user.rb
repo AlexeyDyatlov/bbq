@@ -6,8 +6,6 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :subscriptions, dependent: :destroy
 
-  has_many :events
-
   validates :name, presence:true, length: {maximum: 35}
 
   validates :email, length: {maximum: 255}
