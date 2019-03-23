@@ -14,7 +14,6 @@
 //= require activestorage
 //= require_tree .
 //= require jquery
-//= require map.js
 //= require twitter/bootstrap
 //= require lightbox-bootstrap
 
