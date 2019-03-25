@@ -3,7 +3,7 @@ class SubscriptionsController < ApplicationController
   before_action :set_subscription, only: [:destroy]
 
   def create
-    unless user_cant_subscribe?(@event)
+    if user_can_subscribe?(@event)
       @new_subscription = @event.subscriptions.build(subscription_params)
       @new_subscription.user = current_user
 
