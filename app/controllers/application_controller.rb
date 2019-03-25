@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
   end
 
   def user_can_subscribe?(event)
-    event.user != current_user && !Subscription.where(event: event).where(user: current_user).exists?
+    !user_signed_in? || (event.user != current_user && !Subscription.where(event: event).where(user: current_user).exists?)
   end
 
   def user_can_add_photo?(event)
